@@ -17,6 +17,7 @@
             --text-muted: #b0b0b0;
             --gradient-purple: linear-gradient(135deg, #4a0069, #8a2be2, #4a0069);
             --gradient-dark: linear-gradient(to right, #0a0a0a, #1a1a1a);
+            --accent-pink: #ff7ac8;
         }
         
         * {
@@ -532,6 +533,71 @@
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(138, 43, 226, 0.5);
         }
+
+        /* Formulario */
+        .form-section {
+            background: linear-gradient(160deg, rgba(10, 10, 10, 0.95), rgba(26, 26, 26, 0.95));
+            position: relative;
+        }
+
+        .form-wrapper {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+            gap: 40px;
+            align-items: center;
+        }
+
+        .form-message {
+            background: rgba(26, 26, 26, 0.8);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 122, 200, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .form-message h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--accent-pink);
+        }
+
+        .form-message p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+        }
+
+        .compliment {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-light);
+            border-left: 4px solid var(--accent-pink);
+            padding-left: 15px;
+            margin-top: 20px;
+        }
+
+        .form-card {
+            background: rgba(8, 8, 8, 0.9);
+            border-radius: 20px;
+            padding: 20px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+        }
+
+        .form-card iframe {
+            width: 100%;
+            min-height: 520px;
+            border: none;
+            border-radius: 14px;
+        }
+
+        .form-note {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 15px;
+        }
         
         /* Footer */
         footer {
@@ -629,6 +695,10 @@
             .map-visual, .distance-info {
                 width: 100%;
             }
+
+            .form-wrapper {
+                grid-template-columns: 1fr;
+            }
         }
         
         /* Efectos especiales */
@@ -696,6 +766,7 @@
             <a href="#" class="logo">Para mi Amor <i class="fas fa-heart heart-pulse"></i></a>
             <ul class="nav-links">
                 <li><a href="#hero">Inicio</a></li>
+                <li><a href="#formulario">Formulario</a></li>
                 <li><a href="#historia">Nuestra Historia</a></li>
                 <li><a href="#razones">Razones</a></li>
                 <li><a href="#mensaje">Mensaje</a></li>
@@ -709,9 +780,29 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Para la mujer que <span class="highlight">ilumina</span> mi vida</h1>
-                <p>Aunque kilómetros nos separan, nada puede cambiar lo que siento por ti. Esta distancia es solo temporal, pero mi amor por ti es eterno.</p>
-                <p>Esta página habla de lo que fuimos, lo que somos y todo lo que podemos llegar a ser juntos.</p>
-                <a href="#mensaje" class="btn">Leer mi mensaje especial</a>
+                <p>Quiero que esta página sea un espacio bonito donde puedas responder cada pregunta con calma, sabiendo que siempre te admiro y te amo.</p>
+                <p>Antes de llegar a mi mensaje, encontrarás un formulario lleno de detalles pensados para ti.</p>
+                <a href="#formulario" class="btn">Ir al formulario</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario -->
+    <section id="formulario" class="form-section">
+        <div class="container">
+            <h2 class="section-title glow-text">Un formulario hecho para ti</h2>
+            <div class="form-wrapper">
+                <div class="form-message">
+                    <h3>Mi hermosa, este espacio es tuyo</h3>
+                    <p>Cada respuesta que escribas es un pedacito de tu esencia, y no sabes lo mucho que valoro cada una de ellas.</p>
+                    <p>Responde con libertad, con calma y con esa luz tan única que solo tú tienes.</p>
+                    <p class="compliment">Eres la mujer más hermosa de todas, por dentro y por fuera, y me encantas en cada detalle.</p>
+                    <p class="compliment">Gracias por ser mi inspiración, mi alegría y mi lugar favorito en el mundo.</p>
+                </div>
+                <div class="form-card">
+                    <iframe title="Formulario de preguntas especiales" src="https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true">Cargando…</iframe>
+                    <p class="form-note">Reemplaza <strong>FORM_ID</strong> con el ID real del formulario de Google Forms.</p>
+                </div>
             </div>
         </div>
     </section>
